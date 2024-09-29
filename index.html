@@ -5,138 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One-Page Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            overflow: hidden; /* Скрывает прокрутку */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #1C253B;
+            color: #E2E8F0;
         }
 
         header {
-            background-color: #333;
-            color: white;
+            background-color: #111729;
             padding: 15px 0;
-            text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
-            transition: background-color 0.6s ease;
-        }
-
-        header:hover {
-            background-color: #444;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         nav {
-            display: inline-block;
+            display: flex;
         }
 
         nav a {
-            color: white;
+            color: #E2E8F0;
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
             transition: color 0.3s ease;
+            transition: font-size 0.3s ease;
         }
 
         nav a:hover {
             color: #ffffff;
+            font-size: 19px;
         }
 
         .content {
-            position: relative;
-            min-height: 100vh;
-            text-align: center;
-            transition: filter 0.5s ease; /* Плавный переход фильтра */
-            /* padding: 10px 15px 20px 25px; */
+            flex: 1;
+            padding: 20px;
+            padding-top: 60px;
+
         }
 
         section {
-            padding: 60px 20px;
-            margin: 20px auto;
-            background-color: rgb(255, 255, 255);
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Фиксированное позиционирование */
-            top: 70px; /* Учитываем высоту заголовка */
-            left: 50%;
-            transform: translateX(-50%); /* Центрирование по горизонтали */
-            width: calc(100% - 40px); /* Учитываем отступы */
-            max-width: 2000px;
-            opacity: 1;
-            transform: translateX(-50%) translateY(20px) scale(0.95); /* Центрирование и уменьшение */
-            transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease; /* Плавные анимации */
+
             display: none;
         }
 
         section:target {
-            display: block; /* Показываем целевую секцию */
-            opacity: 1;
-            transform: translateX(-50%) translateY(0) scale(1); /* Центрирование и увеличение */
-            background-color: #fe3030; /* Плавное изменение фона */
+            display: block;
         }
 
+        .block {
+            background-color: #2A364F;
+            padding: 5px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+
+        }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #111729;
             text-align: center;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            left: 0;
+            padding: 2px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Эффект размытия фона при активации секции */
-        section:target ~ .content {
-            filter: blur(4px); /* Размытие фона */
-        }
-
-        /* Плавное возвратное состояние для фона */
-        section:not(:target) ~ .content {
-            filter: blur(0);
-        }
     </style>
+    <script>
+        window.onload = function() {
+            if (!window.location.hash) {
+                window.location.hash = '#home';
+            }
+        };
+    </script>
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <a href="#home">|</a>
+            <a href="#home">Danil Solomakhin</a>
+            <a href="#home">|</a>
+            <a href="#about">About</a>
+            <a href="#home">|</a>
+            <a href="#services">Services</a>
+            <a href="#home">|</a>
+            <a href="#contact">Contact</a>
+            <a href="#home">|</a>
+            <a href="#resume">Resume</a>
+            <a href="#home">|</a>
+        </nav>
+    </header>
 
-<div class="content">
-    <section id="home">
-        <h1>Welcome to My Website</h1>
-        <p>This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.</p>
-    </section>
+    <div class="content">
+        <section id="home">
+            <div class="block">
+                <h1>Welcome to My Website</h1>
+                <p>This is the home section.This is the home section.</p>
+            </div>
+        </section>
 
-    <section id="about">
-        <h1>About Us</h1>
-        <p>This is the about section.</p>
-    </section>
+        <section id="about">
+            
+            <div class="block">
+                
+                <h1>About Us</h1>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+            </div>
+            <div class="block">
+                <h1>About Us</h1>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+                <p>This is the about section.</p>
+            </div>
+        </section>
 
-    <section id="services">
-        <h1>Our Services</h1>
-        <p>This is the services section.</p>
-    </section>
+        <section id="services">
+            <div class="block">
+                <h1>Our Services</h1>
+                <p>This is the services section.</p>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h1>Contact Us</h1>
-        <p>This is the contact section.</p>
-    </section>
-</div>
+        <section id="contact">
+            <div class="block">
+                <h1>Contact Us</h1>
+                <p>This is the contact section.</p>
+                <svg viewBox="0 0 24 24" width="5.2em" height="5.2em"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="currentColor"></path></svg>
+            </div>
+        </section>
+    </div>
 
-<footer>
-    <p>© 2024 Danylo Solomakhin</p>
-</footer>
+    <footer>
+        <p>Danylo Solomakhin 2024</p>
+    </footer>
 
 </body>
 </html>
