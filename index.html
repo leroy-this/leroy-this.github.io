@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Page Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Скрывает прокрутку */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background-color 0.6s ease;
+        }
+
+        header:hover {
+            background-color: #444;
+        }
+
+        nav {
+            display: inline-block;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .content {
+            position: relative;
+            min-height: 100vh;
+            text-align: center;
+            transition: filter 0.5s ease; /* Плавный переход фильтра */
+            /* padding: 10px 15px 20px 25px; */
+        }
+
+        section {
+            padding: 60px 20px;
+            margin: 20px auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Фиксированное позиционирование */
+            top: 70px; /* Учитываем высоту заголовка */
+            left: 50%;
+            transform: translateX(-50%); /* Центрирование по горизонтали */
+            width: calc(100% - 40px); /* Учитываем отступы */
+            max-width: 2000px;
+            opacity: 1;
+            transform: translateX(-50%) translateY(20px) scale(0.95); /* Центрирование и уменьшение */
+            transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease; /* Плавные анимации */
+            display: none;
+        }
+
+        section:target {
+            display: block; /* Показываем целевую секцию */
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1); /* Центрирование и увеличение */
+            background-color: #fe3030; /* Плавное изменение фона */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Эффект размытия фона при активации секции */
+        section:target ~ .content {
+            filter: blur(4px); /* Размытие фона */
+        }
+
+        /* Плавное возвратное состояние для фона */
+        section:not(:target) ~ .content {
+            filter: blur(0);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="content">
+    <section id="home">
+        <h1>Welcome to My Website</h1>
+        <p>This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.This is the home section.</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>This is the about section.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <p>This is the services section.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>This is the contact section.</p>
+    </section>
+</div>
+
+<footer>
+    <p>© 2024 Danylo Solomakhin</p>
+</footer>
+
+</body>
+</html>
