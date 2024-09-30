@@ -14,15 +14,15 @@
             font-family: Arial, sans-serif;
             background-color: #1C253B;
             color: #E2E8F0;
+            cursor: default;
         }
 
         header {
             background-color: #111729;
-            padding: 15px 0;
+            padding: 1rem;
+            margin: 0 0 10rem 0;
             position: fixed;
             width: 100%;
-            top: 0;
-            left: 0;
             z-index: 1000;
             display: flex;
             justify-content: center;
@@ -31,6 +31,8 @@
 
         nav {
             display: flex;
+            justify-content: space-between;
+            width: 70%;
         }
 
         nav a {
@@ -44,19 +46,18 @@
 
         nav a:hover {
             color: #ffffff;
-            font-size: 19px;
+            font-size: 18.5px;
+            text-shadow: 0px 0px 1px #ffffff;
         }
 
         .content {
             flex: 1;
-            padding: 20px;
-            padding-top: 60px;
-
+            padding: 5rem 9rem 2rem;
         }
 
         section {
-
             display: none;
+            padding: auto;
         }
 
         section:target {
@@ -65,20 +66,26 @@
 
         .block {
             background-color: #2A364F;
-            padding: 5px 20px;
-            margin: 10px;
-            border-radius: 5px;
+            border-radius: 1rem;
+            padding: 0.5rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             position: relative;
+            display: flex;
+            margin-top: 1rem;
+            align-items: center;
+            margin-bottom: 20px;
 
         }
+        .block img {
+            margin-right: 15px;
+            max-width: 200px;
+        }
+
         footer {
             background-color: #111729;
             text-align: center;
-            padding: 2px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px #00000033;
         }
-
     </style>
     <script>
         window.onload = function() {
@@ -92,64 +99,38 @@
 
     <header>
         <nav>
-            <a href="#home">|</a>
-            <a href="#home">Danil Solomakhin</a>
-            <a href="#home">|</a>
-            <a href="#about">About</a>
-            <a href="#home">|</a>
-            <a href="#services">Services</a>
-            <a href="#home">|</a>
-            <a href="#contact">Contact</a>
-            <a href="#home">|</a>
-            <a href="https://github.com/leroy-this/leroy-this.github.io/releases/download/v1/Danil_Solomakhin_Resume.pdf">Resume</a>
-            <a href="#home">|</a>
+            <span>|</span>
+            <a href="#home">👤&#160;&#160;Danil Solomakhin</a>
+            <span>|</span>
+            <a href="#services">⚙️&#160;&#160;Services</a>
+            <span>|</span>
+            <a href="#contact">📝&#160;&#160;Contacts</a>
+            <span>|</span>
+            <a href="https://github.com/leroy-this/leroy-this.github.io/releases/download/v1/Danil_Solomakhin_Resume.pdf">💾&#160;&#160;Resume</a>
+            <span>|</span>
         </nav>
     </header>
 
     <div class="content">
         <section id="home">
+            <div><h1>Welcome to My Website</h1></div>
             <div class="block">
-                <h1>Welcome to My Website</h1>
-                <p>This is the home section.This is the home section.</p>
-            </div>
-        </section>
+                <img src="shared/my_profile_photo.png" alt="My profile image">
 
-        <section id="about">
-            
-            <div class="block">
-                
-                <h1>About Us</h1>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
+                <div><p>This is the home section.<br>dfsf</p></div>
+                <br>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
             </div>
             <div class="block">
-                <h1>About Us</h1>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
-                <p>This is the about section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
+                <p>This is the home section.</p>
             </div>
         </section>
 
@@ -170,7 +151,7 @@
     </div>
 
     <footer>
-        <p>Danylo Solomakhin 2024</p>
+        <p>© 2024 Danil Solomakhin </p>
     </footer>
 
 </body>
